@@ -1,0 +1,42 @@
+  @startuml
+
+class iPhone {
+  - musicPlayer: MusicPlayer
+  - phone: Phone
+  - internetBrowser: InternetBrowser
+
+  + playMusic()
+  + pauseMusic()
+  + selectMusic()
+  + makeCall()
+  + answerCall()
+  + startVoiceMail()
+  + displayPage()
+  + addTab()
+  + updatePage()
+}
+
+interface MusicPlayer {
+  + play()
+  + pause()
+  + selectMusic()
+}
+
+interface Phone {
+  + call()
+  + answer()
+  + voiceMail()
+}
+
+interface InternetBrowser {
+  + displayPage()
+  + addTab()
+  + updatePage()
+}
+
+iPhone -- MusicPlayer
+iPhone -- Phone
+iPhone -- InternetBrowser
+
+@enduml
+
